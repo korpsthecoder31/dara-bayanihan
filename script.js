@@ -5,6 +5,8 @@ let ticketAmount = 0;
 let cocktailAmount = 0;
 let otherAmount = 0;
 
+let displayAmount;
+
 const totalTracker = document.querySelector("#totalTracker")
 
 // ticket sale variables and event listeners
@@ -43,7 +45,7 @@ function updateTicketSale() {
     ticketAmount += 1
     amountRaised += 150
     ticketTracker.textContent = ticketAmount
-    totalTracker.textContent = amountRaised
+    totalTracker.textContent = amountRaised.toLocaleString()
 }
 
 // cocktail sale tracker function
@@ -52,27 +54,61 @@ function updateCocktailSale() {
     cocktailAmount += 1
     amountRaised += 20
     cocktailTracker.textContent = cocktailAmount
-    totalTracker.textContent = amountRaised
+    totalTracker.textContent = amountRaised.toLocaleString()
 }
 
 // modal update sales function
 
-const editButton = document.querySelector("#editButton")
-
+const editButton = document.querySelector("#editButton")   
 const acceptButton = document.querySelector("#acceptButton")
-
 const cancelButton = document.querySelector("#cancelButton")
+
+const ticketInput = document.querySelector("#ticketInput")
+const cocktailInput = document.querySelector("#cocktailInput")
+const otherInput = document.querySelector("#otherInput")
 
 const modal = document.querySelector("#updateSalesBox")
 
-editButton.addEventListener("click", () =>
+editButton.addEventListener("click", () => {
+    ticketInput.value = ""
+    cocktailInput.value = ""
+    otherInput.value = ""
+    ticketInput.placeholder = `${ticketAmount}`
+    cocktailInput.placeholder = `${cocktailAmount}`
+    otherInput.placeholder = `${otherAmount}`
     modal.showModal()
-)
+})
 
 acceptButton.addEventListener("click", () =>
-    modal.close()
+    manualSalesUpdate()
 )
 
 cancelButton.addEventListener("click", () =>
     modal.close()
 )
+
+// function for manual update
+
+function manualSalesUpdate() {
+    if (ticketInput.value) {
+        ticketAmount = Number(ticketInput.value)
+        ticketTracker.textContent = ticketAmount
+    }
+
+    if (cocktailInput.value) {
+        cocktailAmount = Number(cocktailInput.value)
+        cocktailTracker.textContent = cocktailAmount
+    }
+
+    if (otherInput.value) {
+        otherAmount = Number(otherInput.value)
+        cocktailTracker.textContent = cocktailAmount
+    }       
+
+    if (ticketInput.value|| cocktailInput.value || otherInput.value) {
+        amountRaised = (ticketAmount * 150) + (cocktailAmount * 20) + (otherAmount)
+        totalTracker.textContent = amountRaised.toLocaleString()
+    }
+
+    modal.close()
+}

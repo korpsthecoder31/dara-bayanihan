@@ -25,3 +25,8 @@ button {
     font-size: 16px;
     padding: 16px;
 }
+
+#updateSalesBox {
+    margin: 16px;
+    margin-left: auto;
+}
