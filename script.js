@@ -3,6 +3,7 @@
 let amountRaised = 0;
 let ticketAmount = 0;
 let cocktailAmount = 0;
+let otherAmount = 0;
 
 const totalTracker = document.querySelector("#totalTracker")
 
@@ -53,3 +54,25 @@ function updateCocktailSale() {
     cocktailTracker.textContent = cocktailAmount
     totalTracker.textContent = amountRaised
 }
+
+// modal update sales function
+
+const editButton = document.querySelector("#editButton")
+
+const acceptButton = document.querySelector("#acceptButton")
+
+const cancelButton = document.querySelector("#cancelButton")
+
+const modal = document.querySelector("#updateSalesBox")
+
+editButton.addEventListener("click", () =>
+    modal.showModal()
+)
+
+acceptButton.addEventListener("click", () =>
+    modal.close()
+)
+
+cancelButton.addEventListener("click", () =>
+    modal.close()
+)
