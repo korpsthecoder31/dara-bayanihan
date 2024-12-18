@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <script defer src="./script.js"></script>
     <title>Dara Bayanihan</title>
 </head>
@@ -36,31 +37,38 @@
     </dialog>
     
     <div id="titleBox">
-        <h2>A FUNDRAISING EVENT FOR BETHUNE HOUSE</h2>
+        <h2 id="subTitle">A FUNDRAISING EVENT FOR BETHUNE HOUSE</h2>
         <h1 id="mainTitle">BAYANIHAN</h1>
     </div>
 
     <div>
-        <div>TOTAL AMOUNT RAISED</div>
+        <div id="totalTitle">TOTAL AMOUNT RAISED</div>
         <div id="numberBox">
-            <p>HKD</p>
+            <p id="currency">HKD</p>
             <div id="totalTracker">0</div>
         </div>
     </div>
 
     <div id="buttonBox">
         <div>
-            <button id="ticketButton">Tickets Sold:</button>
-            <div id="ticketTracker">0</div>
+            <button id="ticketButton">
+                <div class="caption">Tickets Sold:</div>
+                <div id="ticketTracker">0</div>
+            </button>
         </div>
         <div>
-            <button id="cocktailButton">Cocktails Sold:</button>
-            <div id="cocktailTracker">0</div>
+            <button id="cocktailButton">
+                <div class="caption">Cocktails Sold:</div>
+                <div id="cocktailTracker">0</div>
+            </button>
         </div>
     </div>
 
     <div id="footer">
-        ***logos here***
+        <img class="logo" src="./pictures/Uma.png">
+        <img class="logo" src="./pictures/Dara Alt Logo Moselle Green.png">
+        <img class="logo" src="./pictures/Bethune.png">
+        <img class="logo" src="./pictures/proof.png">
     </div>
 
 </body>
