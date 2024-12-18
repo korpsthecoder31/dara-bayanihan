@@ -40,17 +40,20 @@ cocktailSale.addEventListener("click", () =>
 )
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowUp") {
+    if (event.key === ",") {
         updateCocktailSale()
     }
 })
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowDown") {
+    if (event.key === ".") {
         minusCocktailSale()
     }
 })
 
+document.addEventListener("keydown", (event) => {
+    console.log(event.key)
+})
 // ticket sale tracker function
 
 function updateTicketSale() {
