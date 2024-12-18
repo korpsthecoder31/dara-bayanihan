@@ -40,13 +40,13 @@ cocktailSale.addEventListener("click", () =>
 )
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === ",") {
+    if (event.key === ".") {
         updateCocktailSale()
     }
 })
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === ".") {
+    if (event.key === ",") {
         minusCocktailSale()
     }
 })
