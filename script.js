@@ -19,8 +19,14 @@ ticketSale.addEventListener("click", () =>
 )
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft") {
+    if (event.key === "ArrowRight") {
         updateTicketSale()
+    }
+})
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+        minusTicketSale()
     }
 })
 
@@ -34,8 +40,14 @@ cocktailSale.addEventListener("click", () =>
 )
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowRight") {
+    if (event.key === "ArrowUp") {
         updateCocktailSale()
+    }
+})
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown") {
+        minusCocktailSale()
     }
 })
 
@@ -48,11 +60,25 @@ function updateTicketSale() {
     totalTracker.textContent = amountRaised.toLocaleString()
 }
 
+function minusTicketSale() {
+    ticketAmount -= 1
+    amountRaised -= 150
+    ticketTracker.textContent = ticketAmount
+    totalTracker.textContent = amountRaised.toLocaleString()
+}
+
 // cocktail sale tracker function
 
 function updateCocktailSale() {
     cocktailAmount += 1
     amountRaised += 20
+    cocktailTracker.textContent = cocktailAmount
+    totalTracker.textContent = amountRaised.toLocaleString()
+}
+
+function minusCocktailSale() {
+    cocktailAmount -= 1
+    amountRaised -= 20
     cocktailTracker.textContent = cocktailAmount
     totalTracker.textContent = amountRaised.toLocaleString()
 }
