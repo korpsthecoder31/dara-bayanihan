@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: rgb(240, 240, 221);
+    background-color: rgba(201, 168, 128, 0.479);
     max-height: 100vh;
 }
 
@@ -35,18 +35,13 @@ div {
     /* border: solid 1px black; */
 }
 
-#header {
-    display: flex;
-    justify-content: flex-end;
-}
-
 #editButton {
     margin: 8px;
     width: 100px;
 }
 
 #updateSalesBox {
-    background-color: rgb(250, 245, 239);
+
     padding: 24px;
 }
 
@@ -164,4 +159,24 @@ button {
     flex-shrink: 0;
     max-width: 100%;
     max-height: 100%;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+}
+
+#editBox {
+    width: 100px;
+    display: flex;
+    margin: auto 0;
+}
+
+#editButton {
+    background-color: rgba(201, 168, 128, 0.479);
+    color: grey;
+}
+
+#photoBox {
+    flex: auto;
 }
