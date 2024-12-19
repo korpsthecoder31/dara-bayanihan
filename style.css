@@ -164,6 +164,7 @@ button {
 #footer {
     display: flex;
     flex-direction: row;
+    gap: 100px;
 }
 
 #editBox {
@@ -173,10 +174,12 @@ button {
 }
 
 #editButton {
-    background-color: rgba(201, 168, 128, 0.479);
+    background-color: rgba(201, 168, 128, 0);
     color: grey;
 }
 
 #photoBox {
-    flex: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
